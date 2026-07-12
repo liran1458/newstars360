@@ -1,0 +1,141 @@
+.video-section {
+  position: relative;
+  overflow: hidden;
+  padding: 94px 0;
+  background:
+    linear-gradient(180deg, #f8fcff 0%, #eef9ff 52%, #ffffff 100%);
+}
+
+.video-section::before {
+  content: '';
+  position: absolute;
+  width: 440px;
+  height: 440px;
+  left: -220px;
+  bottom: -220px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(79, 198, 244, 0.22), transparent 68%);
+  pointer-events: none;
+}
+
+.video-section::after {
+  content: '';
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  right: -130px;
+  top: 70px;
+  border: 1px solid rgba(79, 198, 244, 0.12);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.video-inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 48px;
+  align-items: center;
+}
+
+.video-copy {
+  max-width: 620px;
+}
+
+.video-copy h2 {
+  margin: 12px 0 18px;
+  color: var(--dark);
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 1.02;
+}
+
+.video-copy p {
+  margin: 0;
+  color: var(--muted-text);
+  font-size: 1.05rem;
+  line-height: 1.9;
+}
+
+.shorts-shell {
+  position: relative;
+  width: min(360px, 88vw);
+  aspect-ratio: 9 / 16;
+  margin-inline: auto;
+  overflow: hidden;
+  border: 7px solid var(--dark);
+  border-radius: 34px;
+  background: #071522;
+  box-shadow:
+    0 35px 90px rgba(6, 21, 34, 0.24),
+    0 0 0 12px rgba(79, 198, 244, 0.055);
+}
+
+.shorts-shell iframe,
+.video-placeholder,
+.video-placeholder img {
+  width: 100%;
+  height: 100%;
+}
+
+.shorts-shell iframe {
+  border: 0;
+}
+
+.video-placeholder {
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+.video-placeholder img {
+  object-fit: cover;
+}
+
+.video-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(5, 18, 31, 0.08), rgba(5, 18, 31, 0.72));
+}
+
+.play-button {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #7bd8ff, var(--primary-blue));
+  color: white;
+  font-size: 2rem;
+  box-shadow: 0 20px 50px rgba(79, 198, 244, 0.4);
+}
+
+.video-label {
+  position: absolute;
+  inset-inline: 20px;
+  bottom: 24px;
+  color: white;
+  text-align: center;
+  font-weight: 800;
+}
+
+@media (min-width: 900px) {
+  .video-section {
+    padding: 126px 0;
+  }
+
+  .video-inner {
+    grid-template-columns: 1fr 0.8fr;
+    gap: 84px;
+  }
+
+  .shorts-shell {
+    margin-inline-start: 0;
+  }
+}
+
+@media (max-width: 599px) {
+  .video-section {
+    padding: 82px 0 92px;
+  }
+}

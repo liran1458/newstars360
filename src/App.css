@@ -1,0 +1,19 @@
+.app {
+  background: var(--white);
+  color: var(--text);
+}
+
+main {
+  overflow: hidden;
+}
+
+.section-wrapper {
+  width: min(1180px, calc(100% - 40px));
+  margin-inline: auto;
+}
+
+@media (max-width: 520px) {
+  .section-wrapper {
+    width: min(100% - 32px, 1180px);
+  }
+}
