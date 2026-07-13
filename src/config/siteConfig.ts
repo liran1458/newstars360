@@ -4,9 +4,9 @@ export type NavLink = {
 };
 
 export const siteConfig = {
-  instagramUrl: 'https://www.instagram.com/USERNAME',
-  tiktokUrl: 'https://www.tiktok.com/@USERNAME',
-  formspreeUrl: 'https://formspree.io/f/YOUR_FORM_ID',
+  instagramUrl: 'https://www.instagram.com/orel_abada?igsh=MXZjMDNqaTV6ZzAzNA%3D%3D&utm_source=qr',
+  tiktokUrl: 'https://www.tiktok.com/@orel_abada19',
+  formspreeUrl: 'https://formspree.io/f/mvzeovjz',
   youtubeEmbedUrl: 'https://www.youtube-nocookie.com/embed/VIDEO_ID',
   placeholderImages: [
     'https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=1200&q=85',

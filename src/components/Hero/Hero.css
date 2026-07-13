@@ -36,7 +36,7 @@
     z-index: 2;
     min-height: calc(100svh - 190px);
     display: grid;
-    gap: 35px;
+    gap: 30px;
     align-items: center;
 }
 
@@ -67,7 +67,7 @@
     max-width: 630px;
     margin: 25px 0 30px;
     color: #53616c;
-    font-size: clamp(1.05rem, 2vw, 1.25rem);
+    font-size: clamp(1.1rem, 2.5vw, 1.35rem);
     line-height: 1.85;
 }
 
@@ -97,7 +97,8 @@
 
 .hero-stats span {
     color: var(--muted-text);
-    font-size: 0.82rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
 }
 
 .hero-visual {
@@ -111,8 +112,8 @@
 .hero-visual img {
     position: relative;
     z-index: 4;
-    width: min(570px, 105%);
-    max-height: 650px;
+    width: min(610px, 112%);
+    max-height: 680px;
     object-fit: contain;
     object-position: bottom;
     filter: drop-shadow(0 35px 35px rgba(7, 21, 34, 0.22));
@@ -122,7 +123,7 @@
     position: absolute;
     z-index: 1;
     bottom: 4%;
-    width: 72%;
+    width: 75%;
     aspect-ratio: 1;
     border-radius: 50%;
     background: linear-gradient(145deg,
@@ -141,14 +142,14 @@
 }
 
 .hero-orbit-one {
-    width: 88%;
+    width: 91%;
     aspect-ratio: 1;
     bottom: -5%;
     animation: slowSpin 20s linear infinite;
 }
 
 .hero-orbit-two {
-    width: 62%;
+    width: 64%;
     aspect-ratio: 1;
     bottom: 8%;
     border-style: dashed;
@@ -211,6 +212,7 @@
     }
 }
 
+/* מחשב */
 @media (min-width: 920px) {
     .hero-grid {
         grid-template-columns: 1.05fr 0.95fr;
@@ -218,14 +220,213 @@
 
     .hero-visual {
         min-height: 650px;
+        transform: translateX(-35px);
+    }
+
+    .hero-visual img {
+        width: min(650px, 118%);
+        max-height: 710px;
+    }
+
+    .hero-glow {
+        width: 78%;
     }
 }
 
+/* טאבלט ומובייל */
+/* מחשב גדול */
+@media (min-width: 1200px) {
+    .hero {
+        padding-top: 105px;
+        padding-bottom: 45px;
+    }
+
+    .hero-grid {
+        min-height: calc(100svh - 150px);
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: clamp(35px, 4vw, 80px);
+        align-items: center;
+    }
+
+    .hero-copy {
+        width: 100%;
+        max-width: 720px;
+        justify-self: center;
+    }
+
+    .hero h1 {
+        font-size: clamp(5rem, 6.5vw, 7rem);
+    }
+
+    .hero-visual {
+        width: 100%;
+        min-height: clamp(620px, 72vh, 780px);
+        place-items: center;
+        align-self: center;
+        justify-self: center;
+        transform: translateX(-20px);
+    }
+
+    .hero-visual img {
+        width: clamp(650px, 47vw, 820px);
+        max-width: none;
+        max-height: min(790px, 82vh);
+        object-position: center;
+    }
+
+    .hero-glow {
+        width: min(78%, 600px);
+        bottom: 7%;
+    }
+
+    .hero-orbit-one {
+        width: min(94%, 720px);
+        bottom: 0;
+    }
+
+    .hero-orbit-two {
+        width: min(68%, 520px);
+        bottom: 10%;
+    }
+
+    .hero-float-card {
+        left: 2%;
+        bottom: 15%;
+    }
+}
+
+/* מחשבים בינוניים ולפטופים */
+@media (min-width: 1200px) and (max-width: 1500px) {
+    .hero-grid {
+        gap: 25px;
+    }
+
+    .hero h1 {
+        font-size: clamp(4.7rem, 6.2vw, 6.2rem);
+    }
+
+    .hero-copy>p {
+        margin-top: 20px;
+        margin-bottom: 24px;
+        font-size: 1.08rem;
+    }
+
+    .hero-stats {
+        margin-top: 26px;
+        padding-top: 20px;
+    }
+
+    .hero-visual {
+        min-height: 610px;
+        transform: translateX(-10px);
+    }
+
+    .hero-visual img {
+        width: clamp(610px, 47vw, 700px);
+        max-height: 680px;
+    }
+
+    .hero-glow {
+        width: min(76%, 520px);
+    }
+
+    .hero-orbit-one {
+        width: min(92%, 640px);
+    }
+
+    .hero-orbit-two {
+        width: min(66%, 470px);
+    }
+}
+
+/* טאבלט, לפטופ צר וחלון דפדפן מוקטן */
+@media (min-width: 920px) and (max-width: 1199px) {
+    .hero {
+        min-height: auto;
+        padding-top: 115px;
+        padding-bottom: 35px;
+    }
+
+    .hero-grid {
+        min-height: auto;
+        grid-template-columns: 1fr;
+        gap: 5px;
+        align-items: start;
+    }
+
+    .hero-copy {
+        width: min(100%, 780px);
+        max-width: none;
+        margin-inline: auto;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: clamp(4rem, 9vw, 5.8rem);
+    }
+
+    .hero-copy>p {
+        max-width: 680px;
+        margin-inline: auto;
+    }
+
+    .hero-actions,
+    .hero-stats {
+        justify-content: center;
+    }
+
+    .hero-stats {
+        max-width: 650px;
+        margin-inline: auto;
+        margin-top: 28px;
+    }
+
+    .hero-visual {
+        width: min(100%, 850px);
+        min-height: 620px;
+        margin: -40px auto 0;
+        place-items: end center;
+        transform: none;
+    }
+
+    .hero-visual img {
+        width: min(690px, 88vw);
+        max-width: none;
+        max-height: 700px;
+        object-position: center bottom;
+    }
+
+    .hero-glow {
+        width: min(540px, 70%);
+        bottom: 3%;
+    }
+
+    .hero-orbit-one {
+        width: min(670px, 88%);
+        bottom: -3%;
+    }
+
+    .hero-orbit-two {
+        width: min(490px, 64%);
+        bottom: 7%;
+    }
+
+    .hero-float-card {
+        left: 8%;
+        bottom: 8%;
+    }
+
+    .scroll-cue {
+        display: none;
+    }
+}
+
+/* מובייל וטאבלט קטן */
 @media (max-width: 919px) {
     .hero {
         padding-top: 105px;
+        padding-bottom: 30px;
 
-        /* בדיוק אותו רקע של Trust במובייל */
         background:
             radial-gradient(circle at 12% 12%,
                 rgba(79, 198, 244, 0.3),
@@ -242,7 +443,14 @@
         opacity: 0.2;
     }
 
+    .hero-grid {
+        min-height: auto;
+        gap: 5px;
+        align-items: start;
+    }
+
     .hero-copy {
+        width: 100%;
         margin-inline: auto;
         text-align: center;
     }
@@ -253,11 +461,36 @@
     }
 
     .hero-visual {
-        min-height: 440px;
+        width: 100%;
+        min-height: 570px;
+        margin-top: -55px;
+        place-items: end center;
+    }
+
+    .hero-visual img {
+        width: min(600px, 112%);
+        max-width: none;
+        max-height: 650px;
+    }
+
+    .hero-glow {
+        width: min(520px, 83%);
+        bottom: 2%;
+    }
+
+    .hero-orbit-one {
+        width: min(630px, 96%);
+        bottom: -4%;
+    }
+
+    .hero-orbit-two {
+        width: min(470px, 70%);
+        bottom: 6%;
     }
 
     .hero-float-card {
         left: 5%;
+        bottom: 7%;
     }
 
     .scroll-cue {
@@ -265,9 +498,16 @@
     }
 }
 
+/* מובייל */
 @media (max-width: 520px) {
     .hero {
-        padding-bottom: 35px;
+        min-height: auto;
+        padding-top: 95px;
+        padding-bottom: 18px;
+    }
+
+    .hero-grid {
+        gap: 0;
     }
 
     .hero h1 {
@@ -280,22 +520,62 @@
 
     .hero-stats {
         gap: 18px;
+        margin-top: 28px;
+        padding-top: 22px;
         justify-content: space-between;
     }
 
     .hero-visual {
-        min-height: 390px;
+        min-height: 570px;
+        margin-top: -70px;
+        transform: translateX(0);
+    }
+
+    .hero-visual img {
+        width: 122%;
+        max-width: 570px;
+        max-height: 620px;
+        object-position: center bottom;
     }
 
     .hero-glow {
-        width: 76%;
+        width: 82%;
+        bottom: 3%;
         box-shadow:
             inset 0 0 70px rgba(255, 255, 255, 0.28),
             0 30px 85px rgba(79, 198, 244, 0.3);
     }
 
-    .hero-float-card {
-        left: 0;
+    .hero-orbit-one {
+        width: 96%;
+        bottom: -2%;
+    }
+
+    .hero-orbit-two {
+        width: 72%;
         bottom: 7%;
+    }
+
+    .hero-float-card {
+        left: 3%;
+        bottom: 7%;
+    }
+}
+
+/* מסכים קטנים במיוחד */
+@media (max-width: 380px) {
+    .hero-visual {
+        min-height: 530px;
+        margin-top: -65px;
+    }
+
+    .hero-visual img {
+        width: 125%;
+        max-height: 575px;
+    }
+
+    .hero-float-card {
+        left: 1%;
+        padding: 13px 15px;
     }
 }

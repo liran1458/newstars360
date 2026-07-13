@@ -3,21 +3,15 @@
   overflow: hidden;
   padding: 96px 0;
   background:
-    radial-gradient(
-      circle at 14% 18%,
+    radial-gradient(circle at 14% 18%,
       rgba(79, 198, 244, 0.24),
-      transparent 32%
-    ),
-    radial-gradient(
-      circle at 88% 82%,
+      transparent 32%),
+    radial-gradient(circle at 88% 82%,
       rgba(139, 223, 255, 0.2),
-      transparent 36%
-    ),
-    linear-gradient(
-      180deg,
+      transparent 36%),
+    linear-gradient(180deg,
       #dff4ff 0%,
-      #d5effd 100%
-    );
+      #d5effd 100%);
 }
 
 .trust::after {
@@ -53,6 +47,8 @@
   max-width: 720px;
   margin: 0 auto;
   color: #5f7383;
+  font-size: 1.2rem;
+  line-height: 1.8;
 }
 
 .trust-grid {
@@ -67,11 +63,9 @@
   border: 1px solid rgba(79, 198, 244, 0.18);
   border-radius: 28px;
   background:
-    linear-gradient(
-      180deg,
+    linear-gradient(180deg,
       rgba(255, 255, 255, 0.97) 0%,
-      rgba(249, 253, 255, 0.96) 100%
-    );
+      rgba(249, 253, 255, 0.96) 100%);
   box-shadow: 0 16px 40px rgba(7, 21, 34, 0.065);
   transition:
     transform 0.25s ease,
@@ -106,11 +100,9 @@
   margin-bottom: 18px;
   border-radius: 17px;
   background:
-    linear-gradient(
-      180deg,
+    linear-gradient(180deg,
       rgba(79, 198, 244, 0.2),
-      rgba(79, 198, 244, 0.1)
-    );
+      rgba(79, 198, 244, 0.1));
   color: var(--primary-blue-strong);
 }
 
@@ -123,6 +115,7 @@
 .trust-card p {
   margin: 0;
   color: var(--muted-text);
+  font-size: 1.08rem;
   line-height: 1.8;
 }
 
@@ -132,6 +125,8 @@
   color: var(--dark);
   text-align: center;
   font-weight: 700;
+  font-size: 1.15rem;
+  line-height: 1.75;
 }
 
 @media (min-width: 600px) {
@@ -168,20 +163,14 @@
   .trust {
     padding: 82px 0;
     background:
-      radial-gradient(
-        circle at 12% 12%,
+      radial-gradient(circle at 12% 12%,
         rgba(79, 198, 244, 0.3),
-        transparent 34%
-      ),
-      radial-gradient(
-        circle at 90% 88%,
+        transparent 34%),
+      radial-gradient(circle at 90% 88%,
         rgba(139, 223, 255, 0.22),
-        transparent 38%
-      ),
-      linear-gradient(
-        180deg,
+        transparent 38%),
+      linear-gradient(180deg,
         #d9f2ff 0%,
-        #cfeafb 100%
-      );
+        #cfeafb 100%);
   }
 }

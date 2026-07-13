@@ -27,35 +27,36 @@ const cards = [
 
 const Trust = () => {
   return (
-  <SectionReveal className="trust" id="trust">
-    <div className="trust-inner section-wrapper">
-      <div className="trust-head">
-        <h2>למה לסמוך עליי</h2>
-        <p>כי אני לא מוכר חלומות – אני בונה תהליכים.</p>
+    <SectionReveal className="trust" id="trust">
+      <div className="trust-inner section-wrapper">
+        <div className="trust-head">
+          <h2>למה לסמוך עליי</h2>
+          <p>כי אני לא מוכר חלומות,  אני בונה תהליכים.</p>
+        </div>
+
+        <div className="trust-grid">
+          {cards.map((card) => {
+            const Icon = card.icon;
+
+            return (
+              <article key={card.title} className="trust-card">
+                <span className="trust-icon">
+                  <Icon size={24} />
+                </span>
+
+                <h3>{card.title}</h3>
+                <p>{card.description}</p>
+              </article>
+            );
+          })}
+        </div>
+
+        <p className="trust-footer">
+          המטרה שלי היא לא להפוך ילד לשחקן ביום, אלא לבנות שחקן לשנים.
+        </p>
       </div>
-
-      <div className="trust-grid">
-        {cards.map((card) => {
-          const Icon = card.icon;
-
-          return (
-            <article key={card.title} className="trust-card">
-              <span className="trust-icon">
-                <Icon size={24} />
-              </span>
-
-              <h3>{card.title}</h3>
-              <p>{card.description}</p>
-            </article>
-          );
-        })}
-      </div>
-
-      <p className="trust-footer">
-        המטרה שלי היא לא להפוך ילד לשחקן ביום – אלא לבנות שחקן לשנים.
-      </p>
-    </div>
-  </SectionReveal>
-);}
+    </SectionReveal>
+  );
+}
 
 export default Trust;

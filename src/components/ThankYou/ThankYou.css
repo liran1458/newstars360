@@ -1,0 +1,68 @@
+.thank-you-page {
+    width: 100%;
+    min-height: 100vh;
+    padding: 40px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:
+        radial-gradient(circle at 12% 12%,
+            rgba(79, 198, 244, 0.3),
+            transparent 34%),
+        radial-gradient(circle at 90% 88%,
+            rgba(139, 223, 255, 0.22),
+            transparent 38%),
+        linear-gradient(180deg,
+            #d9f2ff 0%,
+            #cfeafb 100%);
+}
+
+.thank-you-card {
+    width: 100%;
+    max-width: 650px;
+    padding: 50px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+    border: 1px solid var(--border);
+    border-radius: 32px;
+    background:
+        radial-gradient(circle at 85% 15%,
+            rgba(79, 198, 244, 0.14),
+            transparent 30%),
+        linear-gradient(180deg,
+            #f2fbff 0%,
+            #eaf7fd 100%);
+    box-shadow: var(--shadow);
+}
+
+.thank-you-icon {
+    width: 84px;
+    height: 84px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: rgba(79, 198, 244, 0.18);
+    border: 1px solid rgba(79, 198, 244, 0.4);
+    color: var(--primary-blue);
+    font-size: 2.8rem;
+    font-weight: 800;
+}
+
+.thank-you-card h1 {
+    margin: 0;
+    font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.thank-you-card p {
+    margin: 0;
+    color: var(--muted-text);
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+.thank-you-card .button {
+    margin-top: 8px;
+}

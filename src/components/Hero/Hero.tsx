@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { FiArrowDown } from 'react-icons/fi';
 import { siteConfig } from '../../config/siteConfig';
-import heroImage from '../../assets/hero-cutout.png';
+import heroImage from '../../assets/heronewstars.png';
 import './Hero.css';
 
 const Hero = () => (

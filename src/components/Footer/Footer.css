@@ -29,7 +29,7 @@
   margin: 0;
   max-width: 500px;
   color: rgba(245, 247, 249, 0.78);
-  font-size: 1rem;
+  font-size: 1.15rem;
   line-height: 1.7;
 }
 
@@ -64,7 +64,8 @@
 .footer-copy {
   margin-top: 8px;
   color: rgba(245, 247, 249, 0.55);
-  font-size: .9rem;
+  font-size: .95rem;
+  line-height: 1.6;
 }
 
 /* Desktop */
@@ -84,7 +85,7 @@
 
   .footer-brand p {
     max-width: 560px;
-    font-size: 1.05rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -119,6 +120,7 @@
   }
 
   .footer-copy {
-    font-size: .85rem;
+    font-size: .9rem;
+    line-height: 1.6;
   }
 }
