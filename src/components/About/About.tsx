@@ -13,7 +13,7 @@ const About = () => (
       </div>
 
       <div className="about-copy">
-        <span className="eyebrow">קצת עליי</span>
+        <span className="eyebrow">עוד קצת עליי</span>
         <h2 className="about-split-title">
           <span className="about-title-small">כדורגל הוא לא מה שאני עושה</span>
           <span className="about-title-large">הוא מי שאני</span>
