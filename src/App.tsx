@@ -24,8 +24,8 @@ function App() {
 
             <main>
               <Hero />
-              <About />
               <VideoSection />
+              <About />
               <Trust />
               <Experience />
               <LielStory />

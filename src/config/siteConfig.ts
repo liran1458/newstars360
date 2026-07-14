@@ -7,7 +7,7 @@ export const siteConfig = {
   instagramUrl: 'https://www.instagram.com/orel_abada?igsh=MXZjMDNqaTV6ZzAzNA%3D%3D&utm_source=qr',
   tiktokUrl: 'https://www.tiktok.com/@orel_abada19',
   formspreeUrl: 'https://formspree.io/f/mvzeovjz',
-  youtubeEmbedUrl: 'https://www.youtube-nocookie.com/embed/VIDEO_ID',
+  youtubeEmbedUrl: 'https://www.youtube.com/embed/rceSphEVkpQ?autoplay=1&mute=1&playsinline=1',
   placeholderImages: [
     'https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=1200&q=85',
     'https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=1200&q=85',
