@@ -14,8 +14,8 @@ export const siteConfig = {
     'https://images.unsplash.com/photo-1553778263-73a83bab9b0c?auto=format&fit=crop&w=1200&q=85'
   ],
   navLinks: [
-    { id: 'about', label: 'קצת עליי' },
-    { id: 'trust', label: 'האמון שלנו' },
+    { id: 'video', label: 'קצת עליי' },
+    { id: 'trust', label: 'היתרנות שלי' },
     { id: 'story', label: 'הסיפור שלנו' }
   ] as NavLink[]
 };

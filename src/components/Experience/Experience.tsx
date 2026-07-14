@@ -3,7 +3,7 @@ import SectionReveal from '../SectionReveal/SectionReveal';
 import './Experience.css';
 
 const points = [
-  'מאמן כדורגל פעיל',
+   ' תעודת מאמן כדורגל פעיל ',
   'ניסיון עבודה עם ילדים ונוער',
   'רקע באימונים אישיים',
   'עבודה על יסודות, ביטחון וקבלת החלטות'

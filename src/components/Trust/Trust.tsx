@@ -30,8 +30,8 @@ const Trust = () => {
     <SectionReveal className="trust" id="trust">
       <div className="trust-inner section-wrapper">
         <div className="trust-head">
-          <h2>למה לסמוך עליי</h2>
-          <p>כי אני לא מוכר חלומות,  אני בונה תהליכים.</p>
+          <h2>היתרונות שלי</h2>
+          <p> אני לא מוכר חלומות,  אני בונה תהליכים.</p>
         </div>
 
         <div className="trust-grid">

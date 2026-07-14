@@ -30,7 +30,7 @@ const Hero = () => (
         <div className="hero-orbit hero-orbit-two" />
         <div className="hero-glow" />
         <img src={heroImage} alt="אוראל עבדה עם כדור" />
-        <div className="hero-float-card"><span>NEW</span><strong>STARS 360</strong><small>Build the player</small></div>
+        <div className="hero-float-card"><span>NEW</span><strong>STARS 360</strong></div>
       </motion.div>
     </div>
     <a className="scroll-cue" href="#about" aria-label="גלילה לתוכן הבא"><span>גלו עוד</span><FiArrowDown /></a>

@@ -10,8 +10,8 @@ const VideoSection = () => {
     <SectionReveal className="video-section" id="video">
       <div className="video-inner section-wrapper">
         <div className="video-copy">
-          <span className="eyebrow">להכיר את הדרך</span>
-          <h2>כמה מילים מאוראל</h2>
+          <span className="eyebrow">בואו נכיר</span>
+          <h2>קצת עליי </h2>
           <p>
             בסרטון קצר אוראל מספר על הגישה שלו לאימון, על הדרך שהוא בונה עם כל
             שחקן ועל החשיבות של התמדה, ביטחון ועבודה נכונה לאורך זמן.

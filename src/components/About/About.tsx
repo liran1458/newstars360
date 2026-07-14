@@ -9,10 +9,7 @@ const About = () => (
         <div className="about-image-frame">
           <img src={aboutImage} alt="אוראל עבדה באימון כדורגל" />
         </div>
-        <div className="about-chip">
-          <strong>דרך חיים</strong>
-          <span>לא רק תחביב</span>
-        </div>
+        
       </div>
 
       <div className="about-copy">
