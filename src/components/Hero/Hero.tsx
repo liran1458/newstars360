@@ -15,7 +15,7 @@ const Hero = () => (
           <a className="button button-primary" href="#contact">
             השארת פרטים
           </a>
-          <a className="button button-ghost" href="#about">להכיר את הדרך <FiArrowDown /></a>
+          <a className="button button-ghost" href="#video">להכיר את הדרך <FiArrowDown /></a>
         </div>
         <div className="hero-divider" aria-hidden="true" />
         <div className="hero-stats" aria-label="יתרונות האימון">
@@ -33,7 +33,7 @@ const Hero = () => (
         <div className="hero-float-card"><span>NEW</span><strong>STARS 360</strong></div>
       </motion.div>
     </div>
-    <a className="scroll-cue" href="#about" aria-label="גלילה לתוכן הבא"><span>גלו עוד</span><FiArrowDown /></a>
+    <a className="scroll-cue" href="#video" aria-label="גלילה לתוכן הבא"><span>גלו עוד</span><FiArrowDown /></a>
   </section>
 );
 
