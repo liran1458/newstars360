@@ -61,7 +61,9 @@
 
 .experience-item:hover {
   transform: translateY(-3px);
-  box-shadow: 0 20px 42px rgba(7, 21, 34, 0.08);
+  box-shadow:
+    0 26px 58px rgba(7, 21, 34, 0.16),
+    0 0 0 1px rgba(79, 198, 244, 0.08);
 }
 
 .experience-icon {
@@ -73,16 +75,16 @@
   margin: 0;
   color: var(--dark);
   font-weight: 700;
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: var(--copy-size);
+  line-height: 1.7;
 }
 
 .experience-summary {
   max-width: 660px;
   margin: 0 auto;
   color: var(--muted-text);
-  font-size: 1.1rem;
-  line-height: 1.9;
+  font-size: var(--copy-size);
+  line-height: var(--copy-line-height);
 }
 
 @media (min-width: 760px) {

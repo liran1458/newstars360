@@ -2,9 +2,12 @@
   position: fixed;
   inset: 0 0 auto;
   z-index: 1000;
-  background: rgba(7, 21, 34, 0.94);
+  background:
+    radial-gradient(circle at 12% -40%, rgba(79, 198, 244, 0.24), transparent 38%),
+    linear-gradient(110deg, rgba(5, 17, 29, 0.98) 0%, rgba(13, 32, 50, 0.97) 52%, rgba(8, 22, 36, 0.98) 100%);
   color: white;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(139, 223, 255, 0.16);
+  box-shadow: 0 10px 34px rgba(3, 13, 23, 0.2);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
 }

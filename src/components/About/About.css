@@ -98,8 +98,8 @@
 .about-copy p {
   margin: 0 0 16px;
   color: rgba(255, 255, 255, 0.82);
-  font-size: 1.15rem;
-  line-height: 1.95;
+  font-size: var(--copy-size);
+  line-height: var(--copy-line-height);
 }
 
 .about-copy p strong {

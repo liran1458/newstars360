@@ -52,14 +52,14 @@
 .liel-story-copy p {
   margin: 0 0 18px;
   color: rgba(255, 255, 255, 0.86);
-  font-size: 1.18rem;
-  line-height: 1.95;
+  font-size: var(--copy-size);
+  line-height: var(--copy-line-height);
 }
 
 .liel-story-highlight {
   margin-top: 26px !important;
   color: var(--secondary-blue) !important;
-  font-size: 1.18rem !important;
+  font-size: var(--copy-size) !important;
   font-weight: 800;
 }
 
@@ -117,8 +117,8 @@
   }
 
   .liel-story-copy p {
-    font-size: 1.1rem;
-    line-height: 1.85;
+    font-size: var(--copy-size);
+    line-height: var(--copy-line-height);
   }
 
   .liel-story-image-frame img {

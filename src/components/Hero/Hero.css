@@ -67,8 +67,8 @@
     max-width: 630px;
     margin: 25px 0 30px;
     color: #53616c;
-    font-size: clamp(1.1rem, 2.5vw, 1.35rem);
-    line-height: 1.85;
+    font-size: var(--copy-size);
+    line-height: var(--copy-line-height);
 }
 
 .hero-actions {
@@ -308,7 +308,7 @@
     .hero-copy>p {
         margin-top: 20px;
         margin-bottom: 24px;
-        font-size: 1.08rem;
+        font-size: var(--copy-size);
     }
 
     .hero-stats {
@@ -577,5 +577,47 @@
     .hero-float-card {
         left: 1%;
         padding: 13px 15px;
+    }
+}
+
+/* Final desktop hero tuning */
+@media (min-width: 1200px) {
+    .hero-grid {
+        grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+        gap: clamp(20px, 2.5vw, 52px);
+    }
+
+    .hero-visual {
+        min-height: clamp(650px, 76vh, 820px);
+        transform: translate(-48px, -24px);
+    }
+
+    .hero-visual img {
+        width: clamp(700px, 51vw, 900px);
+        max-height: min(830px, 86vh);
+    }
+
+    .hero-glow {
+        width: min(82%, 650px);
+        bottom: 5%;
+    }
+
+    .hero-orbit-one {
+        width: min(98%, 760px);
+    }
+
+    .hero-orbit-two {
+        width: min(72%, 550px);
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1500px) {
+    .hero-visual {
+        transform: translate(-34px, -18px);
+    }
+
+    .hero-visual img {
+        width: clamp(650px, 49vw, 760px);
+        max-height: 730px;
     }
 }

@@ -59,8 +59,8 @@
 .thank-you-card p {
     margin: 0;
     color: var(--muted-text);
-    font-size: 1.2rem;
-    line-height: 1.8;
+    font-size: var(--copy-size);
+    line-height: var(--copy-line-height);
 }
 
 .thank-you-card .button {

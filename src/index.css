@@ -14,6 +14,8 @@
   --border: #dbe8ef;
   --bg: #ffffff;
   --shadow: 0 25px 70px rgba(7, 21, 34, 0.1);
+  --copy-size: clamp(1.08rem, 1.25vw, 1.18rem);
+  --copy-line-height: 1.82;
 }
 
 * {
