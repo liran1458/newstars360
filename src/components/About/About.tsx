@@ -17,10 +17,9 @@ const About = () => (
 
       <div className="about-copy">
         <span className="eyebrow">קצת עליי</span>
-        <h2>
-          כדורגל הוא לא מה שאני עושה.
-          <br />
-          הוא מי שאני.
+        <h2 className="about-split-title">
+          <span className="about-title-small">כדורגל הוא לא מה שאני עושה</span>
+          <span className="about-title-large">הוא מי שאני</span>
         </h2>
         <p>
           שמי אוראל עבדה. מאמן כדורגל, מנטור לשחקנים צעירים, ואדם שחי את עולם

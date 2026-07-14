@@ -17,6 +17,7 @@ const Hero = () => (
           </a>
           <a className="button button-ghost" href="#about">להכיר את הדרך <FiArrowDown /></a>
         </div>
+        <div className="hero-divider" aria-hidden="true" />
         <div className="hero-stats" aria-label="יתרונות האימון">
           <div><strong>360°</strong><span>מעטפת לשחקן</span></div>
           <div><strong>1:1</strong><span>יחס אישי</span></div>

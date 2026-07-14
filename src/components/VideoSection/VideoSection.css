@@ -139,3 +139,18 @@
     padding: 82px 0 92px;
   }
 }
+
+/* Unified centered section heading */
+.video-copy {
+  text-align: center;
+}
+
+.video-copy .eyebrow {
+  display: block;
+  text-align: center;
+}
+
+.video-copy h2,
+.video-copy p {
+  margin-inline: auto;
+}

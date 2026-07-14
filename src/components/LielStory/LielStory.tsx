@@ -7,9 +7,10 @@ const LielStory = () => {
     <SectionReveal className="liel-story" id="story">
       <div className="liel-story-inner section-wrapper">
         <div className="liel-story-copy">
-          <span className="liel-story-decor">״</span>
-
-          <h2>הסיפור שלנו,  הדרך של ליאל עבדה</h2>
+          <h2 className="liel-story-title">
+            <span className="liel-story-title-large">הסיפור שלנו</span>
+            <span className="liel-story-title-small">הדרך של ליאל עבדה</span>
+          </h2>
 
           <p>
             ליאל עבדה, אחי הגדול, שחקן נבחרת ישראל.
