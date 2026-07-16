@@ -4,15 +4,9 @@
     padding: 120px 0 70px;
     overflow: hidden;
     background:
-        radial-gradient(circle at 12% 12%,
-            rgba(79, 198, 244, 0.3),
-            transparent 34%),
-        radial-gradient(circle at 90% 88%,
-            rgba(139, 223, 255, 0.22),
-            transparent 38%),
-        linear-gradient(180deg,
-            #d9f2ff 0%,
-            #cfeafb 100%);
+        radial-gradient(circle at 12% 12%, rgba(79, 198, 244, 0.3), transparent 34%),
+        radial-gradient(circle at 90% 88%, rgba(139, 223, 255, 0.22), transparent 38%),
+        linear-gradient(180deg, #d9f2ff 0%, #cfeafb 100%);
 }
 
 .hero::before {
@@ -21,11 +15,8 @@
     inset: 0;
     opacity: 0.28;
     background-image:
-        linear-gradient(rgba(7, 21, 34, 0.05) 1px,
-            transparent 1px),
-        linear-gradient(90deg,
-            rgba(7, 21, 34, 0.05) 1px,
-            transparent 1px);
+        linear-gradient(rgba(7, 21, 34, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(7, 21, 34, 0.05) 1px, transparent 1px);
     background-size: 38px 38px;
     mask-image: linear-gradient(to bottom, black, transparent 80%);
     -webkit-mask-image: linear-gradient(to bottom, black, transparent 80%);
@@ -63,7 +54,7 @@
     text-shadow: 0 10px 35px rgba(79, 198, 244, 0.22);
 }
 
-.hero-copy>p {
+.hero-copy > p {
     max-width: 630px;
     margin: 25px 0 30px;
     color: #53616c;
@@ -78,58 +69,43 @@
     margin-bottom: 18px;
 }
 
-.hero-stats {
-    width: min(100%, 540px);
-    margin: 0;
-    padding-top: 18px;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 0;
-    border-top: 1px solid rgba(7, 21, 34, 0.12);
-}
-
-.hero-stats div {
-    position: relative;
-    display: grid;
-    place-items: center;
-    gap: 4px;
-    min-width: 0;
-    padding: 12px 14px 0;
-    text-align: center;
-}
-
-.hero-stats div + div {
-    position: relative;
-}
-
-.hero-stats div + div::before {
-    content: '';
-    position: absolute;
-    inset-inline-start: 0;
-    top: 50%;
-    width: 1px;
-    height: 52px;
-    background: rgba(7, 21, 34, 0.12);
-    transform: translateY(-50%);
-}
-
-.hero-stats strong {
-    color: var(--dark);
-    font-size: 1.35rem;
-}
-
-.hero-stats span {
-    color: var(--muted-text);
-    font-size: 0.95rem;
-    line-height: 1.5;
-}
-
+/* אזור התמונה */
 .hero-visual {
+    position: relative;
+    width: 100%;
+    min-height: 490px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-end;
+    isolation: isolate;
+}
+
+.hero-visual-stage {
     position: relative;
     min-height: 490px;
     display: grid;
     place-items: end center;
     isolation: isolate;
+}
+
+/*
+  הקו מעל התמונה.
+  הוא ממוקם עצמאית ולכן לא יעלה לתוך הכפתור
+  ולא ישנה את המיקום המדויק של התמונה.
+*/
+.hero-visual > .hero-divider {
+    position: absolute;
+    z-index: 8;
+    top: 2px;
+    left: 50%;
+    width: min(92%, 610px);
+    height: 1px;
+    margin: 0;
+    border: 0;
+    background: rgba(7, 21, 34, 0.12);
+    transform: translateX(-50%);
+    pointer-events: none;
 }
 
 .hero-visual img {
@@ -149,9 +125,7 @@
     width: 75%;
     aspect-ratio: 1;
     border-radius: 50%;
-    background: linear-gradient(145deg,
-            var(--primary-blue),
-            #9de6ff);
+    background: linear-gradient(145deg, var(--primary-blue), #9de6ff);
     box-shadow:
         inset 0 0 70px rgba(255, 255, 255, 0.35),
         0 35px 100px rgba(79, 198, 244, 0.34);
@@ -204,8 +178,48 @@
     font-size: 1rem;
 }
 
-.hero-float-card small {
-    color: rgba(255, 255, 255, 0.58);
+/* סטטים מתחת לתמונה */
+.hero-stats {
+    width: min(100%, 610px);
+    margin: 22px auto 0;
+    padding-top: 18px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0;
+    border-top: 1px solid rgba(7, 21, 34, 0.12);
+    flex: 0 0 auto;
+}
+
+.hero-stats div {
+    position: relative;
+    display: grid;
+    place-items: center;
+    gap: 4px;
+    min-width: 0;
+    padding: 12px 14px 0;
+    text-align: center;
+}
+
+.hero-stats div + div::before {
+    content: '';
+    position: absolute;
+    inset-inline-start: 0;
+    top: 50%;
+    width: 1px;
+    height: 52px;
+    background: rgba(7, 21, 34, 0.12);
+    transform: translateY(-50%);
+}
+
+.hero-stats strong {
+    color: var(--dark);
+    font-size: 1.35rem;
+}
+
+.hero-stats span {
+    color: var(--muted-text);
+    font-size: 0.95rem;
+    line-height: 1.5;
 }
 
 .scroll-cue {
@@ -237,43 +251,40 @@
 
 /* מחשב */
 @media (min-width: 920px) {
-    .hero-grid {
-        grid-template-columns: 1.05fr 0.95fr;
-    }
-
-    .hero-visual {
-        min-height: 650px;
-        transform: translateX(-35px);
-    }
-
     .hero-visual img {
-        width: min(650px, 118%);
-        max-height: 710px;
-    }
-
-    .hero-glow {
-        width: 78%;
+        transform: translateX(-4%);
     }
 }
 
-/* טאבלט ומובייל */
-/* מחשב גדול */
+/*
+  מחשב גדול:
+  מחזיר את פריסת הדסקטופ המקורית —
+  התמונה משמאל, התוכן מימין והסטטים מתחת לכפתורים.
+  במובייל המבנה נשאר בדיוק כפי שהוא עכשיו.
+*/
 @media (min-width: 1200px) {
     .hero {
+        min-height: 100svh;
         padding-top: 105px;
         padding-bottom: 45px;
     }
 
     .hero-grid {
         min-height: calc(100svh - 150px);
-        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-        gap: clamp(35px, 4vw, 80px);
+        grid-template-columns: minmax(0, 1.04fr) minmax(0, 0.96fr);
+        grid-template-rows: 1fr auto;
+        grid-template-areas:
+            "copy visual"
+            "stats visual";
+        gap: 18px clamp(24px, 3vw, 58px);
         align-items: center;
     }
 
     .hero-copy {
+        grid-area: copy;
         width: 100%;
         max-width: 720px;
+        align-self: end;
         justify-self: center;
     }
 
@@ -281,20 +292,33 @@
         font-size: clamp(5rem, 6.5vw, 7rem);
     }
 
+    /*
+      display: contents מאפשר לילדים של hero-visual
+      להשתלב ישירות בגריד הראשי בלי לשנות את ה-TSX.
+    */
     .hero-visual {
+        display: contents;
+    }
+
+    .hero-visual > .hero-divider {
+        display: none;
+    }
+
+    .hero-visual-stage {
+        grid-area: visual;
         width: 100%;
-        min-height: clamp(620px, 72vh, 780px);
-        place-items: center;
+        min-height: clamp(650px, 76vh, 820px);
         align-self: center;
         justify-self: center;
-        transform: translateX(-20px);
+        transform: translateX(-24px);
     }
 
     .hero-visual img {
         width: clamp(650px, 47vw, 820px);
         max-width: none;
         max-height: min(790px, 82vh);
-        object-position: center;
+        object-position: center bottom;
+        transform: translateX(-4%);
     }
 
     .hero-glow {
@@ -316,30 +340,37 @@
         left: 2%;
         bottom: 15%;
     }
+
+    .hero-stats {
+        grid-area: stats;
+        width: min(100%, 610px);
+        margin: 0 auto;
+        padding-top: 18px;
+        align-self: start;
+        justify-self: center;
+    }
+
+    .scroll-cue {
+        display: flex;
+    }
 }
 
-/* מחשבים בינוניים ולפטופים */
+/* לפטופים ומחשבים בינוניים */
 @media (min-width: 1200px) and (max-width: 1500px) {
     .hero-grid {
-        gap: 25px;
+        gap: 14px 25px;
     }
 
     .hero h1 {
         font-size: clamp(4.7rem, 6.2vw, 6.2rem);
     }
 
-    .hero-copy>p {
+    .hero-copy > p {
         margin-top: 20px;
         margin-bottom: 24px;
-        font-size: var(--copy-size);
     }
 
-    .hero-stats {
-        margin-top: 26px;
-        padding-top: 20px;
-    }
-
-    .hero-visual {
+    .hero-visual-stage {
         min-height: 610px;
         transform: translateX(-10px);
     }
@@ -362,7 +393,7 @@
     }
 }
 
-/* טאבלט, לפטופ צר וחלון דפדפן מוקטן */
+/* טאבלט ולפטופ צר */
 @media (min-width: 920px) and (max-width: 1199px) {
     .hero {
         min-height: auto;
@@ -388,28 +419,29 @@
         font-size: clamp(4rem, 9vw, 5.8rem);
     }
 
-    .hero-copy>p {
+    .hero-copy > p {
         max-width: 680px;
         margin-inline: auto;
     }
 
-    .hero-actions,
-    .hero-stats {
+    .hero-actions {
         justify-content: center;
-    }
-
-    .hero-stats {
-        max-width: 650px;
-        margin-inline: auto;
-        margin-top: 28px;
     }
 
     .hero-visual {
         width: min(100%, 850px);
         min-height: 620px;
         margin: -40px auto 0;
-        place-items: end center;
         transform: none;
+    }
+
+    .hero-visual-stage {
+        min-height: 620px;
+    }
+
+    .hero-visual > .hero-divider {
+        top: 42px;
+        width: min(92%, 650px);
     }
 
     .hero-visual img {
@@ -417,6 +449,7 @@
         max-width: none;
         max-height: 700px;
         object-position: center bottom;
+        transform: translateX(-4%);
     }
 
     .hero-glow {
@@ -447,19 +480,9 @@
 /* מובייל וטאבלט קטן */
 @media (max-width: 919px) {
     .hero {
+        min-height: auto;
         padding-top: 105px;
         padding-bottom: 30px;
-
-        background:
-            radial-gradient(circle at 12% 12%,
-                rgba(79, 198, 244, 0.3),
-                transparent 34%),
-            radial-gradient(circle at 90% 88%,
-                rgba(139, 223, 255, 0.22),
-                transparent 38%),
-            linear-gradient(180deg,
-                #d9f2ff 0%,
-                #cfeafb 100%);
     }
 
     .hero::before {
@@ -478,22 +501,33 @@
         text-align: center;
     }
 
-    .hero-actions,
-    .hero-stats {
+    .hero-actions {
         justify-content: center;
     }
 
     .hero-visual {
-        width: 100%;
         min-height: 570px;
         margin-top: -55px;
-        place-items: end center;
+        transform: none;
+    }
+
+    /*
+      משאיר את התמונה בדיוק בגובה הנוכחי,
+      אבל מוריד את הקו אל מתחת לכפתורים.
+    */
+    .hero-visual > .hero-divider {
+        top: 62px;
+    }
+
+    .hero-visual-stage {
+        min-height: 570px;
     }
 
     .hero-visual img {
-        width: min(600px, 112%);
-        max-width: none;
+        width: 121%;
+        max-width: 610px;
         max-height: 650px;
+        transform: translateX(-7%);
     }
 
     .hero-glow {
@@ -524,7 +558,6 @@
 /* מובייל */
 @media (max-width: 520px) {
     .hero {
-        min-height: auto;
         padding-top: 95px;
         padding-bottom: 18px;
     }
@@ -541,28 +574,37 @@
         width: 100%;
     }
 
-    .hero-stats {
-        gap: 18px;
-        margin-top: 28px;
-        padding-top: 22px;
-        justify-content: space-between;
+    .hero-visual {
+        min-height: 530px;
+        margin-top: -58px;
     }
 
-    .hero-visual {
-        min-height: 570px;
-        margin-top: -70px;
-        transform: translateX(0);
+    .hero-visual > .hero-divider {
+        top: 68px;
+        width: 92%;
+    }
+
+    .hero-visual-stage {
+        min-height: 530px;
+        overflow: hidden;
     }
 
     .hero-visual img {
-        width: 122%;
-        max-width: 570px;
-        max-height: 620px;
-        object-position: center bottom;
-    }
+    width: 126%;
+    max-width: 570px;
+    max-height: 590px;
+    object-position: center bottom;
+
+    /* שומר על המרכוז לצד שמאל */
+    transform: translateX(-8.5%);
+
+    /* מעלה את התמונה ב־10 פיקסלים */
+    position: relative;
+    bottom: 10px;
+}
 
     .hero-glow {
-        width: 82%;
+        width: 81%;
         bottom: 3%;
         box-shadow:
             inset 0 0 70px rgba(255, 255, 255, 0.28),
@@ -570,12 +612,12 @@
     }
 
     .hero-orbit-one {
-        width: 96%;
+        width: 95%;
         bottom: -2%;
     }
 
     .hero-orbit-two {
-        width: 72%;
+        width: 71%;
         bottom: 7%;
     }
 
@@ -583,89 +625,11 @@
         left: 3%;
         bottom: 7%;
     }
-}
-
-/* מסכים קטנים במיוחד */
-@media (max-width: 380px) {
-    .hero-visual {
-        min-height: 530px;
-        margin-top: -65px;
-    }
-
-    .hero-visual img {
-        width: 125%;
-        max-height: 575px;
-    }
-
-    .hero-float-card {
-        left: 1%;
-        padding: 13px 15px;
-    }
-}
-
-/* Divider between the actions and the statistics */
-
-
-/* Final desktop hero positioning */
-@media (min-width: 1200px) {
-    .hero-grid {
-        grid-template-columns: minmax(0, 0.96fr) minmax(0, 1.04fr);
-        gap: clamp(24px, 3vw, 58px);
-    }
-
-    .hero-visual {
-        min-height: clamp(650px, 76vh, 820px);
-        transform: translate(-62px, -30px);
-    }
-
-    .hero-visual img {
-        width: clamp(710px, 51vw, 900px);
-        max-width: none;
-        max-height: min(835px, 86vh);
-    }
-
-    .hero-glow {
-        width: min(81%, 640px);
-        bottom: 5%;
-    }
-
-    .hero-orbit-one {
-        width: min(97%, 750px);
-    }
-
-    .hero-orbit-two {
-        width: min(71%, 545px);
-    }
-}
-
-@media (min-width: 1200px) and (max-width: 1500px) {
-    .hero-visual {
-        transform: translate(-44px, -22px);
-    }
-
-    .hero-visual img {
-        width: clamp(660px, 49vw, 790px);
-        max-height: 750px;
-    }
-}
-
-/* Tablet and mobile alignment */
-@media (max-width: 1199px) {
-    .hero-divider,
-    .hero-stats {
-        margin-inline: auto;
-    }
-}
-
-@media (max-width: 520px) {
-    .hero-divider {
-        width: 92%;
-        margin: 16px auto 12px;
-    }
 
     .hero-stats {
         width: 92%;
-        margin-inline: auto;
+        margin-top: 18px;
+        padding-top: 22px;
     }
 
     .hero-stats div {
@@ -679,38 +643,35 @@
     .hero-stats span {
         font-size: 0.9rem;
     }
+}
 
+/* מסכים קטנים במיוחד */
+@media (max-width: 380px) {
     .hero-visual {
-        min-height: 530px;
-        margin-top: -58px;
-        transform: none;
+        min-height: 505px;
+        margin-top: -52px;
+    }
+
+    .hero-visual > .hero-divider {
+        top: 62px;
+        width: 96%;
+    }
+
+    .hero-visual-stage {
+        min-height: 505px;
     }
 
     .hero-visual img {
-        width: 116%;
-        max-width: 550px;
-        max-height: 590px;
-        object-position: center bottom;
-        transform: none;
+        width: 130%;
+        max-height: 560px;
+        transform: translateX(-9%);
     }
 
-    .hero-glow {
-        width: 81%;
-        bottom: 3%;
+    .hero-float-card {
+        left: 1%;
+        padding: 13px 15px;
     }
 
-    .hero-orbit-one {
-        width: 95%;
-        bottom: -2%;
-    }
-
-    .hero-orbit-two {
-        width: 71%;
-        bottom: 7%;
-    }
-}
-
-@media (max-width: 380px) {
     .hero-stats {
         width: 96%;
     }
@@ -726,14 +687,108 @@
     .hero-stats span {
         font-size: 0.84rem;
     }
+}
+/* אזור התמונה אינו אינטראקטיבי ולא יחסום את הכפתורים שמעליו */
+.hero-visual,
+.hero-visual-stage,
+.hero-divider,
+.hero-glow,
+.hero-orbit,
+.hero-float-card,
+.hero-visual img {
+    pointer-events: none;
+}
+.hero-copy,
+.hero-actions {
+    position: relative;
+    z-index: 20;
+}
 
-    .hero-visual {
-        min-height: 505px;
-        margin-top: -52px;
-    }
+.hero-actions a {
+    position: relative;
+    z-index: 21;
+    pointer-events: auto;
+    touch-action: manipulation;
+}
+/* טאבלט לאורך – iPad Mini ודומים */
+@media (min-width: 700px) and (max-width: 919px) {
+  .hero {
+    padding-top: 115px;
+    padding-bottom: 40px;
+  }
 
-    .hero-visual img {
-        width: 119%;
-        max-height: 560px;
-    }
+  .hero-grid {
+    gap: 12px;
+  }
+
+  .hero-copy {
+    width: min(100%, 700px);
+    margin-inline: auto;
+    padding-inline: 24px;
+    text-align: center;
+  }
+
+  .hero-eyebrow {
+    font-size: 1rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(4.6rem, 11vw, 6rem);
+    line-height: 0.94;
+  }
+
+  .hero-copy > p {
+    max-width: 680px;
+    margin: 28px auto 32px;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    text-align: center;
+  }
+
+  .hero-actions {
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .hero-actions .button {
+    width: auto;
+    min-width: 165px;
+  }
+
+  .hero-visual {
+    margin-top: -35px;
+  }
+
+  .hero-visual > .hero-divider {
+    top: 52px;
+    width: 82%;
+  }
+
+  .hero-visual-stage {
+    min-height: 650px;
+  }
+
+  .hero-visual img {
+    width: 112%;
+    max-width: 650px;
+    max-height: 690px;
+    transform: translate(-6%, -10px);
+  }
+
+  .hero-glow {
+    width: min(560px, 76%);
+  }
+
+  .hero-orbit-one {
+    width: min(680px, 90%);
+  }
+
+  .hero-orbit-two {
+    width: min(500px, 66%);
+  }
+
+  .hero-stats {
+    width: 82%;
+    margin-top: 20px;
+  }
 }

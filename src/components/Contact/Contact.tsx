@@ -93,17 +93,6 @@ const Contact = () => {
               }}
             />
 
-            <label htmlFor="email">אימייל (לא חובה)</label>
-
-            <input
-              id="email"
-              name="email"
-              type="email"
-              autoComplete="email"
-              maxLength={100}
-              title="יש להזין כתובת אימייל תקינה"
-            />
-
             <input
               type="hidden"
               name="_subject"

@@ -10,6 +10,7 @@ import LielStory from './components/LielStory/LielStory';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
 import ThankYou from './components/ThankYou/ThankYou';
+import Accessibility from './components/Accessibility/Accessibility';
 
 import './App.css';
 
@@ -20,9 +21,10 @@ function App() {
         path="/"
         element={
           <div className="app">
+            <a className="skip-link" href="#main-content">דלגו לתוכן המרכזי</a>
             <Header />
 
-            <main>
+            <main id="main-content">
               <Hero />
               <VideoSection />
               <About />
@@ -33,6 +35,7 @@ function App() {
             </main>
 
             <Footer />
+            <Accessibility />
           </div>
         }
       />

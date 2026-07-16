@@ -138,3 +138,20 @@ section {
     transition-duration: 0.01ms !important;
   }
 }
+
+:root { --accessibility-font-scale: 1; }
+body { font-size: calc(16px * var(--accessibility-font-scale)); }
+.skip-link { position: fixed; z-index: 3000; top: 10px; right: 10px; padding: 12px 18px; border-radius: 12px; background: #fff; color: #071522; font-weight: 900; transform: translateY(-150%); box-shadow: 0 10px 30px rgba(0,0,0,.2); }
+.skip-link:focus { transform: translateY(0); }
+html.a11y-underline-links a { text-decoration: underline !important; text-underline-offset: 4px; }
+html.a11y-grayscale { filter: grayscale(1); }
+html.a11y-contrast body { background: #000; color: #fff; }
+html.a11y-contrast .app, html.a11y-contrast section, html.a11y-contrast footer { filter: contrast(1.2); }
+html.a11y-contrast .button, html.a11y-contrast input, html.a11y-contrast .contact-card { border: 2px solid #000 !important; }
+/* התאמת טקסטים לטאבלט במצב לאורך */
+@media (min-width: 700px) and (max-width: 919px) {
+  :root {
+    --copy-size: 1.2rem;
+    --copy-line-height: 1.8;
+  }
+}
