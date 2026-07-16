@@ -1,12 +1,15 @@
 .app {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
   background: var(--white);
   color: var(--text);
 }
 
 main {
-  overflow: hidden;
+  flex: 1;
+  overflow-x: clip;
 }
-
 .section-wrapper {
   width: min(1180px, calc(100% - 40px));
   margin-inline: auto;
